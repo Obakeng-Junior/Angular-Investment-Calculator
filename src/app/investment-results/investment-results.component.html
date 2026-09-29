@@ -1,0 +1,30 @@
+@if (!results) {
+<p class="results-message center">Enter your numbers above to see a year-by-year growth forecast.</p>
+} @else {
+  <div class="results-wrapper">
+    <h2>Your investment projection</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>Investment Value</th>
+          <th>Interest This Year</th>
+          <th>Total Interest</th>
+          <th>Money Invested</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (result of results; track result.year) {
+          <tr>
+            <td>{{ result.year }}</td>
+            <td>{{ result.valueEndOfYear | currency: 'R' }}</td>
+            <td>{{ result.interest | currency: 'R' }}</td>
+            <td>{{ result.totalInterest | currency: 'R' }}</td>
+            <td>{{ result.totalAmountInvested | currency: 'R' }}</td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+}
+

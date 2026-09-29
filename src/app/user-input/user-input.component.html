@@ -1,0 +1,70 @@
+<div class="calculator-panel">
+  <p class="panel-intro">See how your savings could grow over time.</p>
+
+  <form (ngSubmit)="onSubmit()" class="investment-form">
+    <div class="input-grid">
+      <div class="field">
+        <label for="initial-investment">Starting amount</label>
+        <input
+          id="initial-investment"
+          name="initial-investment"
+          type="number"
+          min="0"
+          step="100"
+          placeholder="e.g. 10000"
+          [(ngModel)]="enteredInitialInvestment"
+        />
+        <small>Your initial investment or current savings.</small>
+      </div>
+
+      <div class="field">
+        <label for="annual-investment">Annual contribution</label>
+        <input
+          id="annual-investment"
+          name="annual-investment"
+          type="number"
+          min="0"
+          step="100"
+          placeholder="e.g. 2000"
+          [(ngModel)]="enteredAnnualInvestment"
+        />
+        <small>How much you add every year.</small>
+      </div>
+    </div>
+
+    <div class="input-grid">
+      <div class="field">
+        <label for="expected-return">Expected yearly return</label>
+        <div class="percentage-field">
+          <input
+            id="expected-return"
+            name="expected-return"
+            type="number"
+            min="0"
+            step="0.1"
+            placeholder="e.g. 7"
+            [(ngModel)]="enteredExpectedReturn"
+          />
+          <span>%</span>
+        </div>
+        <small>Average yearly growth rate.</small>
+      </div>
+
+      <div class="field">
+        <label for="duration">Investment period</label>
+        <input
+          id="duration"
+          name="duration"
+          type="number"
+          min="1"
+          step="1"
+          placeholder="e.g. 10"
+          [(ngModel)]="enteredDuration"
+        />
+        <small>How many years you plan to invest.</small>
+      </div>
+    </div>
+
+    <button type="submit">Calculate my projection</button>
+  </form>
+</div>

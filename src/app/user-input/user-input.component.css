@@ -1,0 +1,122 @@
+.calculator-panel {
+  max-width: 52rem;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, #2d7a68, #235d4d);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+}
+
+.panel-intro {
+  margin: 0 0 1.25rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ecfffb;
+}
+
+.investment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 1.25rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+label {
+  display: block;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #dcfff4;
+}
+
+input {
+  width: 100%;
+  padding: 0.8rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0.6rem;
+  background-color: rgba(12, 37, 31, 0.18);
+  color: #f2fffb;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: rgba(242, 255, 251, 0.66);
+}
+
+input:focus {
+  outline: 2px solid rgba(170, 255, 220, 0.9);
+  border-color: transparent;
+}
+
+.percentage-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(12, 37, 31, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 0.6rem;
+  padding-right: 0.75rem;
+}
+
+.percentage-field input {
+  border: none;
+  background: transparent;
+  box-shadow: none;
+}
+
+.percentage-field span {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #ecfffb;
+}
+
+small {
+  color: #d9f9ee;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
+button {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  background: linear-gradient(180deg, #aef4d7, #7fe0b7);
+  color: #163a31;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 640px) {
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calculator-panel {
+    margin: 1rem;
+    padding: 1rem;
+  }
+}

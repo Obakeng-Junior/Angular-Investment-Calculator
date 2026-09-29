@@ -1,0 +1,56 @@
+.results-wrapper {
+  max-width: 60rem;
+  margin: 2rem auto;
+  padding: 1rem 0;
+}
+
+.results-wrapper h2 {
+  margin-bottom: 0.75rem;
+  text-align: center;
+  color: #ecfffb;
+}
+
+.results-message {
+  margin: 1.5rem auto;
+  max-width: 32rem;
+  padding: 0.8rem 1rem;
+  border-radius: 0.75rem;
+  background: rgba(255, 255, 255, 0.04);
+  color: #dffdf4;
+}
+
+table {
+  width: min(100%, 60rem);
+  margin: 0 auto;
+  padding: 1rem;
+  table-layout: fixed;
+  border-spacing: 0.75rem;
+  text-align: right;
+  background: rgba(9, 26, 22, 0.18);
+  border-radius: 0.85rem;
+}
+
+table thead {
+  font-size: 0.72rem;
+  color: #83e6c0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+table th,
+table td {
+  padding: 0.65rem 0.5rem;
+}
+
+table tbody {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 0.9rem;
+  color: #d8f7ee;
+}
+
+@media (max-width: 640px) {
+  table {
+    border-spacing: 0.25rem;
+    font-size: 0.75rem;
+  }
+}
