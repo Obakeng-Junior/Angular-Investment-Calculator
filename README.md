@@ -1,27 +1,82 @@
-# EssentialsPractice
+# Angular Investment Calculator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0-next.2.
+A simple Angular project that helps users estimate how their investments could grow over time based on their starting amount, annual contributions, expected return rate, and investment period.
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This app is designed to give a quick financial projection for long-term investing. Users enter:
 
-## Code scaffolding
+- initial investment amount
+- annual contribution
+- expected yearly return percentage
+- duration in years
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+The app then calculates and displays a year-by-year breakdown of:
 
-## Build
+- investment value
+- interest earned each year
+- total interest accumulated
+- total amount invested
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Features
 
-## Running unit tests
+- clean and responsive user interface
+- simple input form for investment planning
+- real-time annual growth projection
+- structured results table for yearly analysis
+- built with Angular standalone components
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Tech Stack
 
-## Running end-to-end tests
+- Angular
+- TypeScript
+- HTML
+- CSS
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Project Structure
 
-## Further help
+- `src/app/user-input` – form controls and user input logic
+- `src/app/investment-results` – investment results table
+- `src/app/app.component.ts` – main calculation logic
+- `src/app/investment-input.model.ts` – typed input model
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## How it works
+
+The app calculates compound growth by applying the expected return rate to the current investment value each year, then adds the yearly contribution. The result is displayed in a table so the user can easily follow the investment growth over time.
+
+## Run locally
+
+1. Clone the repository
+2. Navigate to the project folder
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Start the app:
+
+```bash
+npm start
+```
+
+5. Open the app in your browser at:
+
+```text
+http://localhost:4200/
+```
+
+## Example
+
+If a user enters:
+
+- Starting amount: 10000
+- Annual contribution: 2000
+- Expected return: 7%
+- Duration: 5 years
+
+The app will generate a yearly investment projection showing the total investment value and interest earned over time.
+
+## Portfolio Note
+
+This project demonstrates front-end development skills in Angular, including component structure, data binding, event handling, and simple financial logic. It is a good example of a practical, user-focused app that solves a real-world problem in a clean interface.
